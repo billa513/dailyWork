@@ -21,8 +21,24 @@
         // $(()=>{
         //     $('p').addClass('add-color');
         //     });
-        $(()=>{
-             $('button').click(()=>{
-                 $('p').toggle();
-             });
-                });
+        // $(()=>{
+        //      $('button').click(()=>{
+        //          $('p').toggle();
+        //      });
+        //         });
+       // $(()=>$('div').addClass('add-color'));
+        $(() => {
+            $('#selected-plays > li').addClass('horizontal');
+            $('#selected-plays li:not(.horizontal)').addClass('sub-level');
+            $('#selected-plays li:not(.horizontal):even').addClass('alt');
+            
+        });
+        $(() => {
+            $('a[href^="mailto:"]').addClass('mailto');
+            $('a[href$=".pdf"]').addClass('pdflink');
+            $('a[href^="http"][href*="henry"]') .addClass('henrylink');
+        });
+        $(() => { 
+            $('tr:even').addClass('alt'); 
+            $('td:contains(Henry)') .addClass('highlight'); 
+           }); 
